@@ -80,6 +80,12 @@ public class Library {
         return null;
     }
 
+    public void displayAllBooks() {
+        for (Book book : books) {
+            System.out.println("Title: " + book.getTitle() + ", Author: " + book.getAuthor() + ", Available Copies: " + book.getAvailableCopies());
+        }
+    }
+
 
 
 
