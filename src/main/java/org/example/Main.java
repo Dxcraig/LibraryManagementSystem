@@ -16,22 +16,10 @@ public class Main {
         library.addMember(new Member("2", "Member Two"));
         library.addMember(new Member("3", "Member Three"));
 
-        // Simulating borrowing books
-        System.out.println("Borrowing Book One by Member One: " + library.borrowBook("1", "1"));
-        System.out.println("Borrowing Book Two by Member Two: " + library.borrowBook("2", "2"));
-        System.out.println("Borrowing Book Three by Member Three: " + library.borrowBook("3", "3"));
-
         // Display all books and their availability
-        System.out.println("\nBooks after borrowing:");
+        System.out.println("Books in the library:");
         library.displayAllBooks();
 
-        // Simulating returning books
-        System.out.println("\nReturning Book One by Member One: " + library.returnBook("1", "1"));
-        System.out.println("Returning Book Two by Member Two: " + library.returnBook("2", "2"));
-        System.out.println("Returning Book Three by Member Three: " + library.returnBook("3", "3"));
 
-        // Display all books and their availability
-        System.out.println("\nBooks after returning:");
-        library.displayAllBooks();
     }
 }

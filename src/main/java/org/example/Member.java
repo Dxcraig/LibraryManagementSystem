@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 
-public class Member {
+public class Member extends Library{
     private String memberId;
     private String name;
     private ArrayList<Book> borrowedBooks;
