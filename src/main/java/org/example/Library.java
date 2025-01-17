@@ -38,6 +38,50 @@ public class Library {
         return false;
     }
 
+    public boolean borrowBook(String memberId, String bookId) {
+        Member member = findMemberById(memberId);
+        Book book = findBookById(bookId);
+
+        if (member != null && book != null && book.getAvailableCopies() > 0) {
+            book.borrowBook();
+            member.borrowBook(book);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean returnBook(String memberId, String bookId) {
+        Member member = findMemberById(memberId);
+        Book book = findBookById(bookId);
+
+        if (member != null && book != null && member.getBorrowedBooks().contains(book)) {
+            book.returnBook();
+            member.returnBook(book);
+            return true;
+        }
+        return false;
+    }
+
+    private Member findMemberById(String memberId) {
+        for (Member member : members) {
+            if (member.getMemberId().equals(memberId)) {
+                return member;
+            }
+        }
+        return null;
+    }
+
+    private Book findBookById(String bookId) {
+        for (Book book : books) {
+            if (book.getBookId().equals(bookId)) {
+                return book;
+            }
+        }
+        return null;
+    }
+
+
+
 
 
 
