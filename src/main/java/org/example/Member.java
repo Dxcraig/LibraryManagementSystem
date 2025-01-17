@@ -35,4 +35,10 @@ public class Member {
     public void setBorrowedBooks(ArrayList<Book> borrowedBooks) {
         this.borrowedBooks = borrowedBooks;
     }
+    public void borrowBook(Book book) {
+        borrowedBooks.add(book);
+    }
+    public void returnBook(Book book) {
+        borrowedBooks.remove(book);
+    }
 }
